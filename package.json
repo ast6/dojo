@@ -1,0 +1,16 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "scripts": {
+  "codegen": "npx  playwright codegen",
+  "trace viever": "npx playwright test --trace on",
+    "ui mode": "npx playwright test --ui"
+  },
+  "author": "Ast",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.5"
+  }
+}
