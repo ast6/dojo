@@ -1,7 +1,6 @@
 import {test, expect} from '@playwright/test';
 import {consumers} from "node:stream";
 test('test', async ({ page }) => {
-
         //#region
         const goToBaseUrl = page.goto('https://coffee-cart.app/');
         const userNameLocator = page.locator('#name')
