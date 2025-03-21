@@ -62,3 +62,27 @@ test.describe('test', async () => {
 
 });
 
+function (value){
+        if (value >= 0 && value <= 100 && !isNaN(value)) {
+                if (value < 50) {
+                        return false
+                } else if (value >= 50 && value <= 100) {
+                        return true
+                }
+        } else {
+                return(console.log("enter valid mark"))
+        }}
+
+test("passed", async() =>{
+        const result = markCheck(50)
+        expect(result).toBeTruthy()
+})
+test("unpassed", async() =>{
+        const result = markCheck(0)
+        expect(result).toBeFalsy()
+})
+test(`unvalid`, async() =>{
+        const result = markCheck(`dsf`)
+        expect(console.log("enter valid mark"))
+})
+
