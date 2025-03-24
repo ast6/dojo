@@ -61,3 +61,5 @@ test(`check errors during registration`, async ({page}) => {
 
     await expect(page.locator(`//*[contains(@class, 'error-messages')]//*[contains(text(), "email is invalid")]`)).toBeVisible()
 })
+
+//login and create articles

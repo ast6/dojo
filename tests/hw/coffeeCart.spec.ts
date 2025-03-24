@@ -17,7 +17,7 @@ test.describe('test', async () => {
             const checkoutLocator = page.locator(`[data-test="checkout"]`)
             const submitPaymentLocator = page.locator(`#submit-payment`)
             const cartPageLocator = page.locator(`//a[@href='/cart']`)
-            const yesDiscountButton = page.locator(`.yes`)
+            //const yesDiscountButton = page.locator(`.yes`)
             //#endregion
 
             await goToBaseUrl
@@ -34,7 +34,6 @@ test.describe('test', async () => {
         async ({page}) => {
             //#region
             const goToBaseUrl = page.goto('https://coffee-cart.app/');
-            const userNameLocator = page.locator('#name')
             const userName = `asdDas`
             const emailFieldLocator = page.locator("#email")
             const userEmail = `pokop@sad.com`
@@ -58,31 +57,5 @@ test.describe('test', async () => {
             await page.getByRole('button', {name: 'Remove one Cappuccino'}).click();
             await expect(checkoutLocator).toContainText('Total: $16.00');
         });
-
-
 });
-
-function (value){
-        if (value >= 0 && value <= 100 && !isNaN(value)) {
-                if (value < 50) {
-                        return false
-                } else if (value >= 50 && value <= 100) {
-                        return true
-                }
-        } else {
-                return(console.log("enter valid mark"))
-        }}
-
-test("passed", async() =>{
-        const result = markCheck(50)
-        expect(result).toBeTruthy()
-})
-test("unpassed", async() =>{
-        const result = markCheck(0)
-        expect(result).toBeFalsy()
-})
-test(`unvalid`, async() =>{
-        const result = markCheck(`dsf`)
-        expect(console.log("enter valid mark"))
-})
 
